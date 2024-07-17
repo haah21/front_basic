@@ -1,0 +1,62 @@
+<!-- 중요 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback 지옥</title>
+</head>
+<body>
+    <!-- ajax를 쓰기위해서는 다음 라이브러리 필요함 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script> 
+    <script>
+        //여기부터
+        async function callbackHell(){
+            const response1 =  await $.ajax({   //awit => 여기서 기다려야함
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                type: 'GET',
+                dataType: 'json',
+                success:function(a){
+                    console.log("a "+ a);     //밑에 response2 함수가 여기 안들어가도 됨
+                },
+                error:function(){
+
+                }
+            });
+            //여기까지 비동기 함수
+            const response2 =  await $.ajax({   
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                type: 'GET',
+                dataType: 'json',
+                success:function(b){
+                    console.log("b "+ b);
+                },
+                error:function(){
+
+                }
+            });
+
+            const response3 =  await $.ajax({   
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                type: 'GET',
+                dataType: 'json',
+                success:function(c){
+                    console.log("c : "+ c);
+                },
+                error:function(){
+
+                }
+            });
+        
+    };
+    
+    callbackHell(); //함수로 만들었기 때문에 호출해야지 작동!
+    console.log("Hello world");
+    </script>
+</body>
+</html>
+
+<!-- 동작은 16과 똑같지만 가독성이 높아짐!
+abc 순서 보장을 위해 await 사용
+async await는 셋뚜셋뚜 -->

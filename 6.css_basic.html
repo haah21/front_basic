@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basic</title>
+    <style>
+        p{
+            background-color: brown;
+            color: gray;
+            /* text 디자인 */
+            letter-spacing: 2px;
+            word-spacing: 50px;
+        }
+        #id1{
+            background-color: white;
+            color: black;
+        }
+        .italic{font-style: italic;}
+        .bigtext{font-size: 24px;}
+        .smalltext{font-size: 12px;}
+        #vwvh{
+            /* 높이에 대해 5% */
+            font-size: 5vh;
+            /* 너비에 대해 5%
+            font-size: 5vw; */
+        }
+
+    </style>
+</head>
+<body>
+    <h2>CSS 기본문법</h2>
+    <p>요소 선택자 적용</p>
+    <p id="id1">id 선택자는 태그 선택자보다 우선적으로 적용</p>
+    <p>중첩 클래스 선택자 적용</p>
+    <p class="italic bigtext">클래스 선택자 적용 : font style과 font size 중첩적용1</p>
+    <p class="italic smalltext">클래스 선택자 적용 : font style과 font size 중첩적용2</p>
+    
+    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">font-family로 font 형식 변경</p>
+    <!-- em:부모요소에 대해 배수, percent : 부모 요소에 대해 페센트 -->
+
+    <div style="font-size: 20px;">
+        여기는 부모 텍스트 입니다
+        <div style ="font-size: 1.5em;"> 이 텍스트는 부모 글꼴의 1.5배</div>
+    </div>
+
+    <div style="font-size: 20px;">
+        test parent case
+        <div style="font-size: 150%;">test child case</div>
+    </div>
+
+    <div>
+        <div id="vwvh">vw, vh를 적용한 글꼴 크기</div>
+    </div>
+
+    <div style="border: 5px solid black; width:400px; height : 300px; margin: auto; text-align: center; place-content: center;" >
+        margin, boader, padding을 가진요소
+    </div>
+
+    <!-- table 생성
+    row 2ro : 1개 : head2개, 1개 : data2개
+    테이블 전체가 가운데 정렬
+    테이블 안에 contents 가운데 정렬 -->
+
+    <table border="1" style="border-collapse: collapse; margin: auto; text-align: center;">
+        <caption>테이블</caption>
+        <thead>
+        <tr><th>th1</th><th>th1th1</th></tr>
+        </thead>
+        <tbody>
+        <tr><th>td1</th><th>td2</th></tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

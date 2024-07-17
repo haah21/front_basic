@@ -1,0 +1,105 @@
+<!-- shift ! tab -> 자동 완성-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BASIC 1</title>
+    <script></script>
+    <style></style>
+</head>
+<!-- <body style="background-color:red"> -->
+<!-- <body background="images/background_image.jpg"> -->
+<body>
+<h2>글자 styling 예제</h2>
+<!-- 인라인 스타일링 -->
+ <p style="background-color : red;">1. 배경색 변경</p>
+ <p style="color: blue;">2. 글자색변경</p>
+ <p style="font-size: 20px;">3. 글자크기 변경</p>
+ <p style="background-color : blue; font-size: 25px; text-align:center "> 4. 복합 스타일링</p>
+ <h2> link와 이미지 삽입</h2>
+ <div><a href="https://naver.com" target="_blank">네이버</a></div>
+ <div>
+    <a href="https://naver.com" target="_blank">
+        <!-- alt : 이미지가 깨졌을 때 대체문자열, 시각장애인용 reader기에서 인식-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS665E2EGzQcS1rsg7bQ_FIS4JRCD3JlTzPxw&s"
+         width="320px" height="200px" style= "border: 3px solid black;" alt="코기허스키">
+    </a>
+ </div>
+<h2>리스트 (ol - 순서가 있는, ul - 순서가 없는)</h2>
+<ol style="list-style: upper-roman;">
+    <li>아이템A</li>
+    <li>아이템B</li>
+    <li>아이템C</li>
+</ol>
+
+<ul style="list-style-type: square;">
+    <li>아이템A</li>
+    <li>아이템B</li>
+    <li>아이템C</li>
+</ul>
+
+<h2> 테이블 예제 </h2>
+<!-- <table border="1"> 중첩된 보더가 생김 -->
+<table border="1" style="border-collapse: collapse;">
+    <caption>테이블명</caption>
+    <!-- 컬럼 여러개 만들 때 th*2 하면 2개 나옴, th*3 하면 3개 -->
+    <thead>
+    <tr>
+        <th>컬럼1</th>
+        <th>컬럼2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>내용1</td>
+        <td>내용2</td>
+    </tr>
+    <tr>
+        <td>내용A</td>
+        <td>내용B</td>
+    </tr>
+    </tbody>
+</table>
+
+<!-- 테이블 만들기 실습-->
+<!-- 테이블명은 post : id, contents, author_email
+요소와 데이터를 가진 테이블 생성 -->
+
+<table border="1" style="border-collapse: collapse;" >
+    <caption>post</caption>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>title</th>
+                <th>contents</th>
+                <th>author_email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>id1</td>
+                <td>title1</td>
+                <td>content</td>
+                <td>email1</td>
+            </tr>
+            <tr>
+                <td>id2</td>
+                <td>title2</td>
+                <td>contents</td>
+                <td>email2</td>
+            </tr>
+            <tr>
+                <td>id3</td>
+                <td>title3</td>
+                <td>contentss</td>
+                <td>email3</td>
+            </tr>
+        </tbody>
+</table>
+
+</body>
+    
+
+</html>
+
